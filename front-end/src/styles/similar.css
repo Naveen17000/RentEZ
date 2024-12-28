@@ -1,0 +1,123 @@
+.similar-products {
+    margin-top: 2rem;
+    margin-left: 20px;
+    position: relative; /* Ensure the button can be positioned relative to this container */
+}
+
+.similar-products h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.products-row-com {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensures products stay in a single row */
+}
+
+.product-card-com {
+    width: 250px; /* Fixed card width */
+    height: 500px; /* Increased card height */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden; /* Ensures content doesn't overflow the card */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Ensure the button is positioned relative to this container */
+}
+
+.product-card-com:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-card-com img {
+    width: 250px; /* Ensures the image takes the full width of the card */
+    height: 200px; /* Increased height for the image */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.product-card-com h4 {
+    font-size: 18px;
+    margin: 10px;
+    text-align: left;
+}
+
+.txt p {
+    font-size: 14px;
+    margin: 5px 10px;
+    text-align: left;
+}
+
+.Price {
+    display: flex; /* Flexbox for horizontal alignment */
+    align-items: center; /* Align items vertically to the center */
+    justify-content: space-between; /* Space between the price and button */
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px;
+    color: #000;
+}
+
+.Price p {
+    margin: 0; /* Remove unnecessary margins for proper alignment */
+}
+
+.rent-now-bttn-com {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-left: 10px; /* Optional: Adds space between price and button */
+    margin-bottom: -13%;
+}
+
+.rent-now-bttn-com:hover {
+    background-color: #0056b3;
+}
+
+
+.specifications {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+.specifications li {
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    background-color: #f9f9f9;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.specifications li:hover {
+    background-color: #f1f1f1; /* Subtle hover effect */
+}
+
+.specifications .spec-key {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.specifications .spec-value {
+    color: #555;
+}
+
+.specifications p{
+    font-weight: bold;
+    color: #002c5c;
+}

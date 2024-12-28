@@ -1,0 +1,752 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align vertically in the center */
+  padding: 10px;
+  background-color: #f4f4f8;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 40px;
+  font-weight: bold;
+  color: #4a7efb;
+  margin-left: 30px;
+}
+.logo a {
+  color: inherit; /* Inherit color from .logo */
+  text-decoration: none; /* Removes underline from the link */
+}
+
+/* Centering the Search Container */
+.search-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+}
+
+/* Search Bar Wrapper with Soft Shadow */
+.search-bar-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #f4f4f8;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 5px 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* General Search Bar Styling */
+.header-search-bar {
+  width: 220px;
+  padding: 8px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  color: #333;
+  background-color: transparent;
+  outline: none;
+}
+
+.header-search-bar::placeholder {
+  color: #999;
+}
+
+/* Search Button with Magnifying Glass Icon */
+.search-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+/* Circle for Magnifying Glass Icon */
+.search-icon-circle {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #4a7efb;
+  border-radius: 50%;
+  transition: 0.3s ease all;
+}
+
+/* Line for Magnifying Glass Icon */
+.search-icon-line {
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background-color: #4a7efb;
+  top: 22px;
+  left: 19px;
+  transform: rotate(45deg);
+  transition: 0.3s ease all;
+}
+
+
+
+/* Adjusting navigation */
+.nav-container {
+  display: flex;
+  justify-content: space-around; /* Space the links evenly */
+  align-items: center;
+  flex-grow: 1; /* Let nav fill the remaining space */
+  margin-left: 820px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center; /* Align links vertically centered */
+  }
+
+.nav-links a {
+  padding: 8px 18px;
+  text-decoration: none;
+  color: black;
+  font-size: 17px;
+  font-weight:lighter;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #4a7efb; /* Change color on hover */
+}
+
+/* Available Equipment button styling */
+.available-eq {
+  padding: 8px 1px;
+  border: 1px solid rgb(127, 108, 108);
+  border-radius: 10px;
+  font-size: 15px;
+  text-decoration-color: rgb(19, 125, 216);
+  margin-left: 20px; /* Adjusting margin for better spacing */
+}
+
+.sign-in-button {
+  padding: 8px 10px;
+  background-color: #4a7efb;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.profile-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -40px; /* Same margin as sign-in button for consistency */
+  cursor: pointer; /* Makes the profile logo clickable */
+}
+
+.profile-icon {
+  width: 40px; /* Adjust the size of the profile icon */
+  height: 40px;
+  border-radius: 50%; /* Makes the image a circle */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  border: 2px solid #4a7efb; /* Optional: adds a border around the image */
+  transition: transform 0.2s ease-in-out; /* Smooth scaling effect */
+}
+
+.profile-icon:hover {
+  transform: scale(1.1); /* Slight zoom-in effect on hover */
+}
+
+
+/* Adjust button hover effect */
+.sign-in-button:hover {
+  background-color: #3a68d6; 
+}
+
+/* Existing styles remain the same */
+
+.about-button {
+  padding: 8px 18px; /* Same padding as nav links */
+  background: none; /* Remove background */
+  border: none; /* Remove border */
+  color: black; /* Match text color */
+  font-size: 17px; /* Match font size */
+  font-weight: lighter; /* Match font weight */
+  text-decoration: none; /* Remove underline */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: color 0.3s; /* Transition for hover effect */
+}
+
+.about-button:hover {
+  color: #4a7efb; /* Change color on hover */
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background-color: #ffffff;
+}
+
+.hero-content {
+  margin-bottom: 40px;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 30px;
+  margin-bottom: 35px;
+}
+/* Style for the hero button */
+.hero-rent-button {
+  background-color: #4a7efb;
+  color: white;
+  padding: 20px 25px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  text-decoration: none; /* This affects only the button, not the Link */
+}
+
+/* Additional rule to ensure no underline for links inside the button */
+.hero-rent-button a {
+  text-decoration: none; /* Remove underline for the Link inside the button */
+  color: inherit; /* Inherit color from the parent button */
+}
+
+/* Hero Image Slideshow */
+.hero-image {
+  position: relative;
+  width: 1000px;
+  height: 500px;
+}
+
+.hero-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out; 
+}
+
+.hero-image img.active {
+  opacity: 1;
+}
+
+
+/* Categories Section */
+.categories-section {
+  padding: 40px;
+  background-color: #f4f4f4;
+  font-family: 'Playfair Display', serif;
+}
+
+.categories-section h2 {
+  font-size: 50px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.category-container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 30px;
+}
+
+.category-filter {
+  max-height: 600px;
+  overflow-y: auto;
+  padding-right: 15px;
+  border-right: 1px solid #eee;
+}
+
+.category-filter ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-filter ul li {
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 12px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.category-filter ul li:hover {
+  background-color: #f5f5f5;
+  transform: translateX(5px);
+}
+
+.category-filter ul li.active {
+  background-color: #e0e0e0;
+  font-weight: bold;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Fixed 3 columns */
+  grid-template-rows: repeat(2, 1fr);    /* Fixed 2 rows */
+  gap: 20px;
+  padding: 20px;
+}
+
+.category-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background-color: #fff;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+}
+
+.category-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.category-content {
+  padding: 15px;
+}
+
+.category-content h3 {
+  margin: 0;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.category-content p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Custom scrollbar styling */
+.category-filter::-webkit-scrollbar {
+  width: 6px;
+}
+
+.category-filter::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.category-filter::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.category-filter::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .category-container {
+    grid-template-columns: 250px 1fr;
+  }
+}
+
+@media (max-width: 992px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    grid-template-rows: repeat(3, 1fr);    /* 3 rows on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .category-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .category-filter {
+    max-height: 200px;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+  }
+  
+  .category-grid {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+    grid-template-rows: repeat(6, 1fr); /* 6 rows on mobile */
+  }
+}
+
+/* Popular Products Section */
+.popular-products {
+  padding: 60px 40px;
+  background-color: #f8f9fa;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+.popular-products h2 {
+  font-size: 50px;
+  margin-bottom: 16px;
+  color: #2d3436;
+}
+
+.section-subtitle {
+  color: #636e72;
+  font-size: 18px;
+  margin-bottom: 40px;
+  font-family: 'Arial', sans-serif;
+}
+
+.products-container {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.products-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 30px;
+  padding: 20px;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.products-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.product-card {
+  flex: 0 0 300px;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.05);
+}
+
+.status-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+}
+
+.status-badge.available {
+  background-color: #00b894;
+}
+
+.status-badge.in-use {
+  background-color: #fdcb6e;
+}
+
+.product-info {
+  padding: 20px;
+  text-align: left;
+}
+
+.product-info h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #2d3436;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.category, .location, .min-rental-days {
+  color: #636e72;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.product-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.star {
+  color: #fdcb6e;
+}
+
+.rentals {
+  color: #636e72;
+}
+
+.product-price {
+  font-size: 24px;
+  color: #2d3436;
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+.currency {
+  font-size: 16px;
+  vertical-align: top;
+}
+
+.period {
+  font-size: 14px;
+  color: #636e72;
+  font-weight: normal;
+}
+
+.rent-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4a7efb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.rent-button:hover {
+  background-color: #3867d6;
+}
+
+@media (max-width: 768px) {
+  .popular-products {
+    padding: 40px 20px;
+  }
+
+  .popular-products h2 {
+    font-size: 36px;
+  }
+
+  .section-subtitle {
+    font-size: 16px;
+  }
+
+  .product-card {
+    flex: 0 0 260px;
+  }
+}
+
+/* Benefits Section */
+.benefits-section {
+  padding: 40px;
+  background-color: #dfe8f5;
+  text-align: center;
+  font-family:Playfair Display;
+  color: #07484A;
+}
+
+.benefits-section h2 {
+  font-size: 50px;
+  margin-bottom: 90px;
+}
+
+.benefits-section h3 {
+  font-size: 30px;
+}
+
+.benefits-grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.benefit {
+  width: 30%;
+  text-align: center;
+}
+
+.benefit p {
+  font-size:20px ;
+}
+
+.benefit img {
+  width: 15%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Footer */
+.footer {
+  background-color: #f4f4f8;
+  padding: 60px 40px 20px;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-section h3 {
+  color: #4a7efb;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.footer-section h4 {
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.company-desc {
+  color: #666;
+  line-height: 1.6;
+  margin-top: 12px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+  color: #666;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #4a7efb;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.legal-links {
+  display: flex;
+  gap: 24px;
+}
+
+.legal-links a {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.legal-links a:hover {
+  color: #4a7efb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-section:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .legal-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* About.css */
+.about-page {
+  padding: 20px;
+  text-align: center;
+}
+
+.about-page h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.about-page p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 10px 0;
+}

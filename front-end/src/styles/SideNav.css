@@ -1,0 +1,72 @@
+.side-nav {
+    width: 200px;
+    padding-top: 70px;
+    padding-left: 20px; /* Add left padding for spacing */
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f4f8;
+}
+
+.nav-item, .logout {
+    max-width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 15px;
+    color: #4a4a4a;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+    position: relative;
+    margin-bottom: 10px; /* Add spacing between items */
+}
+.side-nav .nav-item {
+    text-decoration: none; /* Disable underline */
+}
+
+.nav-item:last-child, .logout {
+    margin-bottom: 0; /* Remove margin from the last item */
+}
+
+.nav-item.active {
+    padding: 10px 15px;
+    background-color: #3d7bf4;
+    color: #fff;
+    border-radius: 8px;
+    margin-left: 10px; /* Shift active item slightly to the right */
+}
+
+.nav-item.active::before {
+    content: '';
+    position: absolute;
+    left: -20px; /* Larger offset for the small blue box */
+    height: 100%; /* Make the small box match the full height of the nav-item */
+    width: 8px; /* Slightly wider small blue box */
+    background-color: #3d7bf4;
+    border-radius: 10px; /* Rounded corners */
+}
+
+.nav-item:hover, .logout:hover {
+    background-color: #e6f0ff; /* Slightly blue background on hover */
+    color: #4a4a4a;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.label {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.notification-dot {
+    height: 6px;
+    width: 6px;
+    background-color: red;
+    border-radius: 50%;
+    margin-left: auto;
+}
+

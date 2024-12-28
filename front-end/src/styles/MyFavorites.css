@@ -1,0 +1,19 @@
+.favorite-icon-new {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, fill 0.2s;  
+  }
+  
+  .favorite-icon-new.active svg path {
+    fill: red; /* Default white color */
+    transition: fill 0.3s; /* Smooth color transition */
+  }
+  
+  .favorite-icon-new svg path {
+    fill: white;/* Change to red when active */
+  }

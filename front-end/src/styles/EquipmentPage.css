@@ -1,0 +1,264 @@
+/* EquipmentPage.css */
+
+.equipment-page {
+    display: flex;
+    overflow-y: hidden; /* Ensures sidebar stays static */
+  }
+
+.sidebar {
+    width: 260px;
+    height: calc(100vh - var(--header-height) - var(--footer-height));
+    padding: 20px;
+    position: sticky;
+    top: 0; /* Align the sidebar to start right under the header */
+    overflow-y: auto;
+    background-color: #f8f8f8; /* Light background color */
+}
+
+
+.sidebar h3 {
+    font-size: 1.5rem; /* Font size for the header */
+    margin-bottom: 15px; /* Space below the header */
+    color: #333; /* Darker text color */
+}
+
+.sidebar .filter-option {
+    font-weight: bold; /* Bold font for filter options */
+    margin-top: 20px; /* Space above filter options */
+    color: #555; /* Dark gray color for the options */
+}
+
+.sidebar input[type="text"],
+.sidebar input[type="number"],
+.sidebar input[type="range"],
+.sidebar select {
+    width: 220px; /* Full width for inputs and select */
+    height: 25px;
+    padding: 10px; /* Padding inside the inputs and select */
+    margin-top: 5px; /* Space above inputs and select */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 1rem; /* Font size for inputs and select */
+    margin-left: 10px;
+}
+
+.sidebar .filter-option {
+    font-weight: bold; /* Bold font for filter options */
+    margin-top: 30px; /* Increase space above filter options */
+    color: #555; /* Dark gray color for the options */
+    font-size: 1.2rem; /* Increase font size of the filter option */
+}
+
+.sidebar select {
+    width: 241px; /* Full width */
+    padding: 12px; /* Increase padding for a larger height */
+    margin-top: 5px; /* Space above the select */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 1.1rem; /* Increase font size */
+    height: 50px; /* Explicit height for the select */
+    color: #797676; /* Change text color to #ccc */
+    background-color: #fff; /* Optional: set background color for better visibility */
+}
+
+.sidebar input[type="range"] {
+    margin-top: 10px; /* Space above the range input */
+}
+
+/* Style for the max price text */
+.sidebar div {
+    margin-top: 5px; /* Space above the max price text */
+    color: #777; /* Gray color for the max price text */
+}
+  
+.content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto; /* Enable vertical scrolling for content */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.equipment-grid {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); 
+    width: 100%;
+    padding: 10px;
+    height: auto;
+}
+
+.equipment-card {
+    flex: 0 0 auto; /* Prevents cards from shrinking */
+    width: 250px;
+    position: relative; 
+    border: 1px solid #ccc; 
+    border-radius: 20px; 
+    padding: 15px; 
+    text-align: center; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    margin-bottom: 0; 
+}
+
+.equipment-card:hover {
+    transform: scale(1.05);
+}
+
+.equipment-card h4 {
+    margin: 0;
+    position: absolute;
+    top: 18px;
+    left: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.equipment-type{
+    margin-top: 5px;
+    position: absolute;
+    top: 38px;
+    left: 10px;
+    font-size: 13px;
+    color: #797676;
+}
+
+.equipment-rentaldays{
+    font-size: 15px;
+    color: #555;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.equipment-image {
+    width: 100%;
+    height: 150px; /* Manually set height */
+    object-fit: cover;
+    margin-top: 53px; /* Space from the name */
+    border-radius: 10px;
+}
+
+.equipment-location {
+    font-size: 15px;
+    color: #555;
+    margin-top: 25px; /* Reduced space between p tags */
+    margin-bottom: -5px;
+    text-align: left;
+    margin-left: 10px;
+    
+    margin-bottom: 10px;
+}
+
+.equipment-price {
+    font-size: 16px;
+    font-weight: bolder;
+    color: #000000;
+    position: absolute;
+    bottom: 8px;
+    left: 25px;
+}
+
+.rent-now-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px; /* Reduced button size */
+    font-size: 0.8rem;
+    cursor: pointer;
+    position: absolute;
+    bottom: 18px;
+    right: 20px;
+    transition: background-color 0.2s;
+}
+
+.rent-now-button:hover {
+    background-color: #0056b3;
+}   
+
+.favorite-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.equipment-location svg {
+    margin-right: 5px;
+    left: 0;
+}
+
+.equipment-rentaldays svg{
+    margin-right: 5px;
+    left: 0;
+}
+
+.favorite-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, fill 0.2s;  
+  }
+  
+  .favorite-icon svg path {
+    fill: white; /* Default white color */
+    transition: fill 0.3s; /* Smooth color transition */
+  }
+  
+  .favorite-icon.active svg path {
+    fill: red; /* Change to red when active */
+  }
+  .scroll-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden; /* Hide scrollbar */
+}
+
+.products-scroll {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 0;
+    width: 100%;
+    scrollbar-width: none; /* For Firefox */
+}
+
+.products-scroll::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Edge */
+}
+
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-button.left {
+    left: 10px;
+}
+
+.scroll-button.right {
+    right: 10px;
+}
+
+.scroll-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}

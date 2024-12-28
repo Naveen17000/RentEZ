@@ -1,0 +1,125 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Common Modal Styles */
+.modal-content {
+    background-color: #fff;
+    padding: 40px; /* Reduced padding for better spacing */
+    border-radius: 10px;
+    width: 450px; /* Increased width */
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.modal-content h2 {
+    margin-bottom: 30px; /* Increased margin for better spacing */
+    font-size: 2.5em; /* Increased font size for better readability */
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Added gap for spacing between inputs */
+}
+
+/* Input Styles */
+.modal-content input[type="text"],
+.modal-content input[type="email"],
+.modal-content input[type="password"] {
+    padding: 20px; /* Increased padding for larger input fields */
+    margin: 0; /* Remove margin for better alignment */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1.2em; /* Increased font size for better readability */
+}
+
+/* Continue Button */
+.continue-btn {
+    padding: 20px; /* Increased padding for larger button */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px; /* Adjusted margin for better spacing */
+    transition: background-color 0.3s;
+    font-size: 1.5em; /* Increased font size */
+}
+
+.continue-btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* Text Links */
+.forgot-password,
+.register-text,
+.login-text {
+    font-size: 1.2em;
+    color: #555;
+    text-decoration: none;
+    margin-top: 10px; /* Adjusted margin for better spacing */
+}
+
+.register-text a,
+.login-text a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.register-text a:hover,
+.login-text a:hover {
+    text-decoration: underline;
+}
+
+.link-button {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: inherit;
+    padding: 0;
+}
+
+.link-button:hover {
+    text-decoration: none;
+}
+
+/* Message Styles */
+.message {
+    font-size: 1em;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
