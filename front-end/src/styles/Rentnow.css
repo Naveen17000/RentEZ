@@ -1,0 +1,654 @@
+  .product-page {
+    padding: 20px;
+  }
+
+  .product-detail {
+    display: flex; /* Aligns images and info side by side */
+    align-items: flex-start; /* Aligns all items at the top */
+    gap: 30px; /* Adds space between the image and product info */
+  }
+
+  /* Container styling */
+.rentnow-container {
+  text-align: center;
+  margin: 20px;
+}
+
+/* Available date styling */
+.available-date {
+  background-color: green !important;
+  color: white !important;
+  border-radius: 50%;
+}
+
+/* Unavailable date styling */
+.unavailable-date {
+  background-color: red !important;
+  color: white !important;
+  border-radius: 50%;
+  pointer-events: none; /* Disable interaction */
+  cursor: not-allowed; 
+}
+
+/* Selected date info */
+.date-info {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+/* Status classes */
+.status.available {
+  color: green;
+  font-weight: bold;
+}
+
+.status.unavailable {
+  color: red;
+  font-weight: bold;
+}
+
+/* React-DatePicker custom classes */
+.available-dates .react-datepicker__day {
+  background-color: green !important;
+  color: white !important;
+}
+
+.unavailable-dates .react-datepicker__day {
+  background-color: red !important;
+  color: white !important;
+}
+
+.date-input-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.date-input {
+  padding-right: 30px; /* Add padding to the right to make space for the icon */
+  padding-left: 10px;
+  width: 200px; /* Adjust as needed */
+}
+
+.calendar-icon {
+  position: absolute;
+  right: 10px; /* Position the icon inside the input box */
+  top: 30%;
+  transform: translateY(-5%);
+  cursor: pointer;
+}
+
+  .product-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    display: inline-block;
+  }
+
+  .thumbnail-images img {
+    width: 100px; /* Set desired width */
+    height: 100px; /* Set desired height */
+    object-fit: cover; /* Ensure the image fills the thumbnail space */
+    margin-bottom: 10px; /* Optional: Add some spacing around each thumbnail */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    margin-left: 50px;
+    cursor: pointer;
+    margin-top: 30px;
+  }
+
+  .product-images {
+    display: flex;
+    align-items: flex-start; /* Aligns thumbnails and main image at the top */
+    margin-right: 20px;
+    flex: 0 0 auto; /* Ensures the image container does not grow or shrink */
+  }
+
+  .product-image {
+    width: 700px;  /* Fixed width for the main image */
+    height: 550px; /* Fixed height for the main image */
+    overflow: hidden;
+    border-radius: 20px;
+    margin-top: 10px;
+    position: relative; /* Ensures it stays in its position */
+  }
+
+  .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the space while maintaining aspect ratio */
+    cursor: pointer;
+  }
+
+  .thumbnail-images {
+    display: flex;
+    flex-direction: column; /* Stacks thumbnails vertically */
+    margin-right: 15px; /* Adds space between thumbnails and main image */
+    flex: 0 0 auto; /* Keeps the thumbnails fixed in size */
+  }
+
+  .thumbnail-images img.selected {
+    border: 2px solid #007bff; /* or your preferred highlight color */
+    opacity: 0.8;
+  }
+
+  .thumbnail-images img {
+    cursor: pointer;
+  }
+
+  .thumbnail-images img:hover {
+    opacity: 0.7;
+  }
+
+  .product-info {
+    margin-left: 30px;
+    flex-grow: 1;
+    max-width: 500px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+  }
+
+  .product-info h2 {
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .product-info h3 {
+    font-size: 1.2rem;
+    color: #777;
+    margin-bottom: 15px;
+  }
+
+  .product-rating {
+    font-size: 1.2rem;
+    color: #f4b400;
+    margin-bottom: 15px;
+  }
+
+  .description-1 {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+
+  .description-1 .read-more {
+    color: #007bff;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.05rem;
+    transition: color 0.3s ease;
+  }
+
+  .description-1 .read-more:hover {
+    color: #0056b3;
+  }
+
+  .price-button-container {
+    display: flex;
+    align-items: center; /* Aligns price and button vertically in the center */
+    justify-content: space-between; /* Places space between price and button */
+    margin-top: 20px;
+  }
+
+  .product-price {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+  }
+
+  .product-price .Rate {
+    text-decoration: line-through;
+    color: #888;
+    opacity: 0.75;
+  }
+
+  .rent-now-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .rent-now-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+
+  .rent-now-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+  }
+
+
+  /* Tab button styling */
+  .tab-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px; /* Reduced space for a more compact layout */
+  }
+
+  .tab-buttons button {
+    background-color: #f9f9f9; /* Slightly lighter background */
+    border: 2px solid #ccc; /* Slightly thicker border */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    padding: 12px 24px; /* Increased padding for larger buttons */
+    margin: 0 12px; /* Slightly increased spacing between buttons */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold; /* Added bold text for more emphasis */
+    transition: all 0.3s ease; /* Smooth transition for hover and active states */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+
+  .tab-buttons button:hover {
+    background-color: #f1f1f1; /* Lighter hover effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+  }
+
+  .tab-buttons .active {
+    background-color: #007bff; /* Bold blue background for active state */
+    color: white;
+    border-color: #007bff; /* Matching border color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for active tab */
+  }
+
+  /* Tab content styling */
+  .tab-content {
+    padding: 25px; /* More padding for spacious content area */
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Rounded corners */
+    margin: 30px auto; /* Increased margin for better spacing */
+    max-width: 900px; /* Slightly wider content area */
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    transition: transform 0.3s ease-in-out; /* Smooth animation for tab content changes */
+  }
+
+  .tab-content:hover {
+    transform: translateY(-5px); /* Slight hover animation to lift the content */
+  }
+
+  /* Specific styling for description, specifications, and reviews sections */
+  .description,
+  .specifications,
+  .reviews {
+    font-size: 16px; /* Slightly larger font for readability */
+    line-height: 1.7; /* Increased line height for better readability */
+    color: #333;
+    margin-bottom: 20px; /* Spacing between sections */
+  }
+
+  .description {
+    font-style: italic; /* Added italics for a different visual treatment */
+  }
+
+  .specifications {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .specifications li {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    background-color: #f9f9f9;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+
+  .specifications li:hover {
+    background-color: #f1f1f1; /* Subtle hover effect */
+  }
+
+  .specifications .spec-key {
+    font-weight: bold;
+    color: #007bff;
+  }
+
+  .specifications .spec-value {
+    color: #555;
+  }
+
+  .reviews {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+  }
+
+  .reviews h4 {
+    font-size: 18px; /* Larger font for review title */
+    color: #007bff; /* Highlighted color for the review section */
+  }
+
+  .review {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .review-text {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  .review:hover {
+    background-color: #f1f1f1; /* Slight background color change on hover */
+    cursor: pointer;
+  }
+
+    
+.products-row {
+      margin-left: -100px;
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+      flex-wrap: wrap; /* Ensures products stay in a single row */
+    }
+
+    .bck-color{
+      background-color: rgb(245, 230, 237);
+    }
+    
+  
+  .txt p{
+    font-size: 13px;
+    margin-left: 10px;
+  }
+
+  .Price p{
+    font-size:15px;
+    font-weight: bolder;
+    margin-top: 30px;
+    margin-left: 15px;
+    color: #000000;
+  }
+    
+    .rent-now-bttn {
+      position: absolute;
+      padding: 0.5rem 0.7rem;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-left: 110px;
+      margin-top: -40px;
+    }
+    
+    .product-card button:hover {
+      background-color: #0056b3;
+    }
+    
+    .specifications p{
+      font-size: 13px;
+    }
+
+  .rlt {
+    margin-left: 10px ;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+  }
+
+  .fullscreen-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .fullscreen-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+  }
+
+  .fullscreen-image {
+    max-width: 100%;
+    max-height: 90vh; 
+    object-fit: contain;
+  }
+  /* Popup Backdrop */
+  .popup-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: background 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .popup-backdrop.success {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  .popup-content-success-content{
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    height: 350px;
+    text-align: left;
+  }
+
+  .producct-image {
+    width: 100%; /* Adjust to fit the container width */
+    max-width: 160px; /* Set a maximum width */
+    height: 150px; /* Maintain aspect ratio */
+    margin-left: 20px;
+    display: block; /* Ensures block-level for centering */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  }
+  
+  .popupp-body .tot-rent-d{
+    margin-top: -95px;
+    margin-bottom: 100px;
+    margin-left: 200px;
+  }
+
+  .popupp-body .tot-rent-dd{
+    margin-top: -130px;
+    margin-bottom: 100px;
+    margin-left: 200px;
+  }
+
+  .popupp-body .tot-rent-ddd{
+    margin-top: -95px;
+    margin-bottom: 100px;
+    margin-left: 200px;
+  }
+
+  .popupp-body .tot-rent-dddd{
+    margin-top: -90px;
+    margin-bottom: 50px;
+    margin-left: 200px;
+  }
+
+  .popup-body {
+    position: relative; /* Ensure the button is positioned relative to the popup-body */
+  }
+  /* Popup Content */
+  .popup-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    width: 100%;
+    height: 400px;
+    text-align: left;
+  }
+  
+  .popup-content label {
+    display: block;
+    margin: 10px 0;
+    margin-right: 10px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+  }
+  
+  .popup-content input {
+    height: 30px;
+    width: 150px;
+    padding: 10px;
+    margin-top: 05px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .popup-content .fd-time{
+    height: 0px;
+    width: 100px;
+    margin-left: 170px;
+    margin-bottom: 70px;
+    border-radius: 4px;
+    margin-top: -80px;
+  }
+  
+  .popup-content .ed-time{
+    height: 0px;
+    width: 100px;
+    margin-left: 170px;
+    margin-bottom: 75px;
+    border-radius: 4px;
+    margin-top: -80px;
+  }
+  
+  .popup-content .fd-time input,
+  .popup-content .ed-time input {
+    height: 30px; /* Match the container's height */
+    width: 100%; /* Match the container's width */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 20px;
+    padding: 10px; /* Adjust for better spacing */
+    font-size: 13px; /* Make the text readable */
+    margin-top: 3px;
+  }
+  
+  .popup-content .ed-time input{
+    margin-top: -6px;
+  }
+  
+  .popup-content .ed input{
+    margin-bottom: 25px;
+  }
+  
+  .close-popup-btn {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    width: 45px;
+    border: 1px solid #007bff;
+    margin-left: 220px;
+    margin-top: -50px;
+  }
+  
+  .bttn{
+      margin-top: 25px;
+      padding: 12px 70px;
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      position: absolute;
+      left: 14.5%;
+  }
+
+  .success-btn{
+    padding: 12px 60px;
+    background-color: #24c750;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: absolute;
+    right: 44%;
+}
+
+.popupp-body h2{
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+}
+  
+  .location{
+    margin-left: 20px;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size:large;
+    color: #000000;
+    font-family:'Times New Roman', Times, serif;
+  }
+  
+  .Minrtd{
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+.popup-header h3{
+  text-align: center;
+  margin-top: -10px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+  .product-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin: 10px auto 20px;
+  }
+
+
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes bounceIn {
+    0% {
+      transform: scale(0.8);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }

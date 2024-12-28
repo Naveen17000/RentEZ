@@ -1,0 +1,206 @@
+/*--------------------
+# Dashboard.css
+-------------------*/
+/* Dashboard.css */
+
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+
+.dashboard-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px; /* Adjust as needed */
+  margin: 0 auto;
+  padding: 2%;
+}
+
+.dashboard-content {
+  padding: 20px;
+  flex: 1;
+}
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Creates 4 equal-width columns */
+  gap: 20px; /* Adjust space between the cards */
+  width: 100%; /* Ensure the container takes up full width */
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  padding: 20px; /* Increase padding to make the box bigger */
+  font-size: 18px; /* Increase font size for better readability */
+  width: 250px; /* Adjust width if you need more space for the label */
+  height: 130px; /* Adjust height for label, value, and image */
+  background-color: #ffffff; /* Background color to distinguish label box */
+  border-radius: 10px; /* Rounded corners for the label box */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for visual appeal */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space between label, value, and image */
+  position: relative; /* Needed for absolute positioning of image */
+}
+
+.stat-card img {
+  position: absolute; /* Position the image in relation to the card */
+  top: 10px; /* Adjust the distance from the top */
+  right: 30px; /* Adjust the distance from the right */
+  width: 50px; /* Size of the image */
+  height: 50px; /* Size of the image */
+  object-fit: contain; /* Ensure the image scales proportionally */
+}
+
+.My-orders-icon {
+  width: 60px; /* Adjust the width as needed */
+  height: 60px; /* Adjust the height as needed */
+  object-fit: cover; /* Ensures the image fits properly */
+  border-radius: 8px; /* Optional: adds rounded corners */
+  margin-top: -90px;
+  margin-left: 180px;
+}
+
+
+.stat-label {
+  font-size: 20px;
+    
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #555;
+  margin-top: 10px; /* Space between the label and the value */
+}
+
+.dashboard-body {
+  display: grid;
+  grid-template-columns: 3fr 2fr 1fr;
+  gap: 20px;
+}
+
+.sales-details {
+  background: #f4f4f8;
+  width: 1180px;
+  padding: 15px;
+  max-height: 350px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.top-products{
+  background: #f4f4f8;
+  padding: 15px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin-top: 400px;
+  margin-left: -1230px;
+}
+.total-sales{
+  background: #f4f4f8;
+  padding: 15px;
+  border-radius: 8px;
+  max-width: 250px;
+  margin-top: -300px;
+  margin-left: 800px;
+  height: 200px;
+}
+
+.My-orders{
+  background: #f4f4f8;
+  padding: 15px;
+  border-radius: 8px;
+  max-width: 250px;
+  margin-top: 450px;
+  margin-left: -450px;
+  height: 200px;
+}
+
+.sales-graph {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 100px;
+  margin-top: 10px;
+}
+
+.graph-bar {
+  background: #4e73df;
+  width: 12%;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 3px;
+}
+
+.top-products ul {
+  list-style: none;
+  padding: 0;
+}
+
+.top-products li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.total-sales-amount {
+  font-size: 28px;
+  font-weight: bold;
+  color: #4e73df;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.My-orders h3 {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.My-orders-count {
+  font-size: 28px;
+  font-weight: bold;
+  color: #4e73df;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.traffic-chart {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.traffic-chart h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.traffic-chart .sub-header {
+  color: #007bff;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.recharts-default-tooltip {
+  background-color: white;
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  font-size: 12px;
+}
+
+.recharts-legend-item {
+  font-size: 14px;
+}

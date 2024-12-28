@@ -1,0 +1,593 @@
+/* General Styles */
+.orders-page {
+  margin: 0px;
+  background-color: #f9fafb;
+  padding: 30px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+h1 {
+  display: flex;
+}
+
+/* Filter Bar */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: fit-content;
+}
+
+.filter-bar input,
+.filter-bar select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.filter-bar input:focus,
+.filter-bar select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.filter-bar button {
+  padding: 10px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.filter-bar button:hover {
+  background-color: #0056b3;
+}
+
+.filter-bar button:last-child {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.filter-bar button:last-child:hover {
+  background-color: #f5c6cb;
+}
+
+/* Orders Table */
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 15px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.orders-table th {
+  background-color: #f1f1f1;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-bottom: 2px solid #eaeaea;
+}
+
+.orders-table td {
+  background-color: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.orders-table tr:hover td {
+  background-color: #f9f9f9;
+}
+
+.order-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+}
+
+/* Order Status Styles */
+.status {
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 4px 8px;
+  display: inline-block;
+}
+
+.status-shipped {
+  color: #6f42c1;
+  background-color: #f3e8ff;
+}
+
+.status-payment {
+  color: #fd7e14;
+  background-color: #fff3cd;
+}
+
+.status-rejected {
+  color: #dc3545;
+  background-color: #f8d7da;
+}
+
+.status-delivered {
+  color: #28a745;
+  background-color: #d4edda;
+}
+
+.status-requested {
+  color: #ff8c00;
+  background-color: #fff3cd;
+}
+
+.status-canceled {
+  color: #dc3545;
+  background-color: #f8d7da;
+}
+
+.status-returned {
+  color: #007bff;
+  background-color: #d1ecf1;
+}
+
+.status-ordered {
+  color: #eb00ef;
+  background-color: #ffd9f8;
+}
+
+/* Details Button */
+.details-button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.details-button:hover {
+  background-color: #0056b3;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.pagination button {
+  background-color: #ffffff;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  margin: 0 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.pagination span {
+  font-weight: bold;
+  padding: 8px 12px;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content-myorders {
+  position: relative;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+  height: 85%;
+}
+
+.close-button-myorders {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+/* Modal Content */
+.modal-content-myorders h1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+}
+
+.modal-content-myorders .order-date,
+.modal-content-myorders .estimated-delivery {
+  font-size: 18px;
+  color: #6c757d;
+}
+
+.modal-content-myorders .estimated-delivery {
+  color: #28a745;
+}
+
+.modal-content-myorders .buttons-myorders {
+  display: flex;
+  gap: 100px;
+  align-self: flex-end;
+  margin-top: -50px;
+  margin-right: 40px;
+}
+
+.modal-content-myorders .buttons-myorders button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content-myorders .buttons-myorders .invoice {
+  background-color: #e9ecef;
+  color: #000;
+}
+.modal-content-myorders .buttons-myorders .payment {
+  background-color: #007bff;
+  color: #fff;
+}   
+
+.modal-content-myorders .buttons-myorders .cancel {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.progress-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+  position: relative;
+  width: 100%;
+}
+
+.progress-bar .step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex: none;
+  width: 20%; /* Ensure equal spacing for each step */
+}
+
+.progress-bar .step .circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #e9ecef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 2;
+  position: relative;
+}
+
+.progress-bar .line {
+  height: 4px;
+  background-color: #e9ecef;
+  position: absolute;
+  top: 25%;
+  transform: translateY(-50%);
+  z-index: 1;
+  width: calc(100% - 30px); /* Adjust width to fit between circles */
+}
+
+.progress-bar .line.active {
+  background-color: #28a745;
+}
+
+.progress-bar .step:first-child .line {
+  left: 50%; /* Start line from the center of the first circle */
+}
+
+.progress-bar .step:not(:last-child) .line {
+  left: calc(78% - 30px); /* Start line from the center of the previous circle */
+}
+
+.progress-bar .step.active .circle {
+  background-color: #28a745;
+}
+
+.progress-bar .step.inactive .circle {
+  background-color: #e9ecef;
+}
+
+.progress-bar .step-text {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.progress-bar .step.active .step-text {
+  color: #28a745;
+}
+
+/* Product Details */
+.order-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.product-image {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.product-details h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin: 10px 0 5px;
+}
+
+
+.product-details-myorders .pickup,
+.product-details-myorders .dropoff {
+  font-size: 14px;
+  color: #000;
+}
+
+.product-details-myorders .price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+}
+
+.product-details-myorders .quantity {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+/* Summary Section */
+.summary {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.summary .delivery,
+.summary .order-summary {
+  width: 40%;
+  padding: 20px;
+  border: 2px solid #e9ecefb7;
+  border-radius: 10px;
+}
+
+.summary h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+
+.summary p {
+  font-size: 14px;
+  color: #6c757d;
+  margin: 5px 0;
+}
+
+.summary .order-summary p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.summary .order-summary .total {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+}
+
+/* Invoice Modal */
+.modal-content-invoice {
+  background: #f8f9fa; /* Light gray for a professional look */
+  padding: 20px;
+  border-radius: 8px;
+  width: 450px;
+  margin: auto;
+  position: relative;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.close-button-invoice {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+}
+
+.invoice-header {
+  text-align: center;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.invoice-header h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #007bff; /* Brand color for header */
+}
+
+.invoice-details {
+  margin-bottom: 20px;
+}
+
+.invoice-details div {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.invoice-items {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.invoice-items th, .invoice-items td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.invoice-items th {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.invoice-footer {
+  text-align: right;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.download-button {
+  margin-top: 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+}
+
+.download-button:hover {
+  background-color: #28a745;
+}
+
+/* Payment Success Animation */
+.payment-success-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.payment-success-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.checkmark-circle {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  border: 5px solid #4caf50;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkmark {
+  position: absolute;
+  width: 20px;
+  height: 40px;
+  border-bottom: 5px solid #4caf50;
+  border-right: 5px solid #4caf50;
+  transform: rotate(45deg);
+}
+
+.back-home-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-home-btn:hover {
+  background-color: #45a049;
+}

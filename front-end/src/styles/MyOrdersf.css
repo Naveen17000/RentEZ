@@ -1,0 +1,154 @@
+.orders-page {
+    margin: 0px;
+    background-color: #f9fafb;
+    padding: 30px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.filter-bar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: fit-content;
+}
+
+.filter-bar input,
+.filter-bar select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.filter-bar input:focus,
+.filter-bar select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.filter-bar button {
+    padding: 10px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.filter-bar button:hover {
+    background-color: #0056b3;
+}
+
+.filter-bar button:last-child {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.filter-bar button:last-child:hover {
+    background-color: #f5c6cb;
+}
+
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.orders-table th,
+.orders-table td {
+    padding: 15px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.orders-table th {
+    background-color: #f1f1f1;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 2px solid #eaeaea;
+}
+
+.orders-table td {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.orders-table tr:hover td {
+    background-color: #f9f9f9;
+}
+
+.order-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+}
+
+.status {
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 4px 8px;
+    display: inline-block;
+}
+
+.status-shipped { color: #6f42c1; background-color: #f3e8ff; }
+.status-payment { color: #fd7e14; background-color: #fff3cd; }
+.status-rejected { color: #dc3545; background-color: #f8d7da; }
+.status-delivered { color: #28a745; background-color: #d4edda; }
+.status-requested { color: #ff8c00; background-color: #fff3cd; }
+.status-canceled { color: #dc3545; background-color: #f8d7da; }
+.status-returned { color: #007bff; background-color: #d1ecf1; }
+
+.details-button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.details-button:hover {
+    background-color: #0056b3;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.pagination button {
+    background-color: #ffffff;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    margin: 0 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.pagination button:hover {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.pagination span {
+    font-weight: bold;
+    padding: 8px 12px;
+}
