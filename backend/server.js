@@ -23,7 +23,7 @@ const corsOptions = {
   origin: [
     'http://localhost:3000',  // Local development for React
     'http://localhost:3001',  // Another local React frontend
-    'https://rent-n3nrzrxfi-naveen17000s-projects.vercel.app', // Vercel frontend
+    'https://rent-p4hr2rxsk-naveen17000s-projects.vercel.app', // Vercel frontend
     'https://rentez-w8lz.onrender.com', // Production backend URL (if needed)
   ],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
