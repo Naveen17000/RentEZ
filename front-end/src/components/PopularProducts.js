@@ -52,7 +52,7 @@ const PopularProducts = () => {
                 <h4>{product.name}</h4>
                 <p className="equipment-type">{product.category}</p>
                 <img
-                  src={`https://rentez-w8lz.onrender.com/${product.images[0] ? product.images[0].replace(/\\/g, '/') : "default-image.jpg"}`}
+                  src={`https://rentez-2quq.onrender.com/${product.images[0] ? product.images[0].replace(/\\/g, '/') : "default-image.jpg"}`}
                   alt={product.name || "Equipment"}
                   className="equipment-image"
                 />

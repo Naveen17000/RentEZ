@@ -168,7 +168,7 @@ const Orders = () => {
       const ordersWithImages = await Promise.all(orderData.map(async (order) => {
         if (order.productId) {
           const product = await fetchProduct(order.productId._id);
-          order.productImage = product.images?.[0] ? `http://localhost:5000/${product.images[0].replace(/\\/g, '/')}` : 'https://via.placeholder.com/150';
+          order.productImage = product.images?.[0] ? `https://rentez-2quq.onrender.com/${product.images[0].replace(/\\/g, '/')}` : 'https://via.placeholder.com/150';
           order.productName = product.name;
           order.productPrice = product.price;
           order.days = Math.ceil((new Date(order.endDate) - new Date(order.fromDate)) / (1000 * 60 * 60 * 24));
