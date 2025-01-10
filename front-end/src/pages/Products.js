@@ -190,7 +190,7 @@ const EquipmentPage = ({ searchQuery }) => {
               </div>
               <h4>{item.name}</h4>
               <p className="equipment-type">{item.subCategory}</p>
-              <img src={`http://localhost:5000/${item.images[0].replace(/\\/g, '/')}`} alt={item.name} className="equipment-image" />
+              <img src={`https://rentez-w8lz.onrender.com/${item.images[0].replace(/\\/g, '/')}`} alt={item.name} className="equipment-image" />
               
               <div className="equipment-location">
       <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

@@ -111,7 +111,7 @@ function MyProducts() {
                       <h4>{product.name}</h4>
                       <p className="equipment-type">{product.subCategory}</p>
                       <img
-                        src={`http://localhost:5000/${product.images[0].replace(/\\/g, '/')}`}
+                        src={`https://rentez-w8lz.onrender.com/${product.images[0].replace(/\\/g, '/')}`}
                         alt={product.name}
                         className="equipment-image"
                       />

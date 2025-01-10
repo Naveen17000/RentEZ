@@ -125,7 +125,7 @@ const Favorites = () => {
 
                     {item.images && item.images.length > 0 ? (
                       <img
-                        src={`http://localhost:5000/${item.images[0].replace(/\\/g, '/')}`}
+                        src={`https://rentez-w8lz.onrender.com/${item.images[0].replace(/\\/g, '/')}`}
                         alt={item.name}
                         className="equipment-image"
                         onError={(e) => {

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Base URL for the API
-const API_BASE_URL = 'http://localhost:5000/api'; // Update this if hosted elsewhere
+const API_BASE_URL = 'https://rentez-w8lz.onrender.com/api'; // Update this if hosted elsewhere
 
 // Configure Axios instance with a base URL
 const api = axios.create({

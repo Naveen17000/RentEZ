@@ -37,7 +37,7 @@ const SimilarProductsSection = ({ productId, category }) => {
       <div className="products-row-com">
         {similarProducts.map((product) => (
           <div className="product-card-com" key={product._id}>
-            <img src={`http://localhost:5000/${product.images[0]}`} alt={product.name} />
+            <img src={`https://rentez-w8lz.onrender.com/${product.images[0]}`} alt={product.name} />
             <h4>{product.name}</h4>
             <div className="txt">
               <p>{product.location}</p>

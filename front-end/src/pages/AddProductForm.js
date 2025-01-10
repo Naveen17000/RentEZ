@@ -146,7 +146,7 @@ function AddProductForm({ onBack, onProductAdded, product }) {
 
       if (product.images && product.images.length > 0) {
         setProductImages(product.images.map(image => ({
-          src: `http://localhost:5000/${image.replace(/\\/g, '/')}`,
+          src: `https://rentez-w8lz.onrender.com/${image.replace(/\\/g, '/')}`,
           isURL: true
         })));
       } else {

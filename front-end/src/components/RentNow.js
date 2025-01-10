@@ -266,9 +266,9 @@ const handleAddressChange = (e) => {
             <img 
               src={
                 selectedImage
-                  ? `http://localhost:5000/${selectedImage.replace(/\\/g, '/')}`
+                  ? `https://rentez-w8lz.onrender.com/${selectedImage.replace(/\\/g, '/')}`
                   : product.image
-                  ? `http://localhost:5000/${product.image.replace(/\\/g, '/')}`
+                  ? `https://rentez-w8lz.onrender.com/${product.image.replace(/\\/g, '/')}`
                   : '/placeholder.jpg'
               }
               alt={product.name} 
@@ -442,9 +442,9 @@ const handleAddressChange = (e) => {
         <img
           src={
             selectedImage
-              ? `http://localhost:5000/${selectedImage.replace(/\\/g, '/')}`
+              ? `https://rentez-w8lz.onrender.com/${selectedImage.replace(/\\/g, '/')}`
               : product.image
-              ? `http://localhost:5000/${product.image.replace(/\\/g, '/')}`
+              ? `https://rentez-w8lz.onrender.com/${product.image.replace(/\\/g, '/')}`
               : '/placeholder.jpg'
           }
           alt={product.name}
@@ -475,7 +475,7 @@ const handleAddressChange = (e) => {
         {product.images.map((image, index) => (
           <img
             key={index}
-            src={`http://localhost:5000/${image.replace(/\\/g, '/')}`} // Fix image path
+            src={`https://rentez-w8lz.onrender.com/${image.replace(/\\/g, '/')}`} // Fix image path
             alt={`Product thumbnail ${index}`}
             onClick={() => handleThumbnailClick(image)} // Set the selected image
             className={selectedImage === image ? 'selected-thumbnail' : ''}
@@ -494,9 +494,9 @@ const handleAddressChange = (e) => {
         <img
           src={
             selectedImage
-              ? `http://localhost:5000/${selectedImage.replace(/\\/g, '/')}`
+              ? `https://rentez-w8lz.onrender.com/${selectedImage.replace(/\\/g, '/')}`
               : product.image
-              ? `http://localhost:5000/${product.image.replace(/\\/g, '/')}`
+              ? `https://rentez-w8lz.onrender.com/${product.image.replace(/\\/g, '/')}`
               : '/placeholder.jpg'
           }
           alt={product.name || 'Product Image'}
