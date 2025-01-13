@@ -24,11 +24,13 @@ const corsOptions = {
     const allowedOrigins = [
       'http://localhost:3000',  // Local development for React
       'http://localhost:3001',  // Another local React frontend
-      'https://rent-ez-git-new-feature-naveen17000s-projects.vercel.app', // Vercel frontend
-      'https://rentez-2quq.onrender.com', // Backend itself (if needed)
+      'https://rentez-2quq.onrender.com',  // Backend itself (if needed)
     ];
 
-    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+    // Allow all Vercel subdomains
+    const isAllowedVercel = origin && origin.endsWith('.vercel.app');
+
+    if (allowedOrigins.includes(origin) || isAllowedVercel || !origin) {
       // Allow requests with no origin (like mobile apps or curl requests)
       callback(null, true);
     } else {
